@@ -32,9 +32,12 @@ button2.addEventListener('click', () => {
     body.style.backgroundColor = couleur;
 });
 
-
+/*------------------------*/
 var menu1 = document.getElementsByClassName('menu')[0];
 var menu2 = document.getElementsByClassName('menu')[1];
+var idmenu1 = document.getElementById('colsim');
+var idmenu2 = document.getElementById('colcom');
+
 var texto = document.getElementsByClassName('texte')[0];
 var tog = "simple";
 
@@ -42,15 +45,25 @@ var tog = "simple";
 menu1.addEventListener('click', () => {
     tog = "simple";
     texto.innerText = tog;
-    menu1.classList.add('valide');
-    console.log(menu1)
-    /*menu1.style.color = "#6fa8dc";*/
+    
+    idmenu1.classList.add('valide');
+    idmenu2.classList.remove('valide');
+    
 });
 
 menu2.addEventListener('click', () => {
     tog = "complexe";
     texto.innerText = tog;
+    
+    idmenu2.classList.add('valide');
+    idmenu1.classList.remove('valide');
+    
 });
+
+console.log(idmenu1);
+console.log(idmenu2);
+
+
 
 
 
