@@ -37,9 +37,8 @@ section {
     box-shadow: 4px 4px 10px var(--ombre);
     width: 450px;
     margin: auto;  /*---pour centrer la section---*/
-    padding: 20px 20px;
+    padding: 20px 25px;
     margin-bottom: 120px;
-
 }
 
 #cercle {
@@ -47,7 +46,7 @@ section {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin: -8px 165px;
+    margin: -8px 155px;
     background-color: var(--colori);
     /*transform: translate(85px, 0px);*/
     z-index: -1;
@@ -59,7 +58,7 @@ section {
     height: 30px;
     border-radius: 50%;
     background-color: var(--colori); 
-    margin: 0px 165px;
+    margin: 0px 150px;
     z-index: 3;
 }
 
@@ -105,6 +104,9 @@ h3 {
 p {
     margin-bottom: 30px;
     color: #777777;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 110px;
 }
 
 button {
