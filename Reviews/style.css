@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --colori: rgb(97, 148, 243);
+    --arriereplan: rgb(241, 245, 249);
+    --ombre: rgb(134, 137, 141);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+    font-family: "Roboto", sans-serif;
+    color: #444444;
+}
+
+body {
+    text-align: center;
+    background-color: var(--arriereplan);
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#trait {
+    display: inline-block; /*---Permet de centrer la div comme text---*/
+    width: 100px;
+    height: 5px;
+    background-color: var(--colori);
+    margin-bottom: 50px;
+}
+
+section {
+    box-shadow: 4px 4px 10px var(--ombre);
+    width: 450px;
+    margin: auto;  /*---pour centrer la section---*/
+    padding: 20px 20px;
+    margin-bottom: 120px;
+
+}
+
+#cercle {
+    position: absolute; /*----indispensable pour le z-index du #cercle----------*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: -8px 165px;
+    background-color: var(--colori);
+    /*transform: translate(85px, 0px);*/
+    z-index: -1;
+}
+
+#tenten {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--colori); 
+    margin: 0px 165px;
+    z-index: 3;
+}
+
+#tenten span {
+    display: block;
+    color: white;
+    font-size: 1.8rem;
+    padding-bottom: 5px;
+}
+
+#portrait {
+    width: 100px;
+    height: 100px;
+    margin: auto;  /*---pour centrerla section---*/
+    margin-top: 30px;   /*----Bien mettre APRES le margin: auto----*/
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;    /*--Pour centrer l'image---*/
+    transform: translate(0px, 0px);
+    z-index: 2;
+}
+
+#container {
+    margin-bottom: 10px;
+}
+
+h2 {
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    color: var(--colori);
+}
+
+p {
+    margin-bottom: 30px;
+    color: #777777;
+}
+
+button {
+    color: var(--colori);
+    border: solid 1px var(--colori);
+    border-radius: 10px;
+    padding: 3px 10px;
+    font-size: 1.5rem;
+}
+
+#boutons {
+    margin:auto;
+    margin-bottom: 15px;
+    width:100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#randomizer {
+    font-size: 1.2rem;
+}
