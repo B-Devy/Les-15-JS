@@ -1,7 +1,7 @@
 
 var navi = document.querySelector('nav');
 var hamburger = document.getElementById('hamburger');
-var header = document.querySelector('header');
+var header = document.getElementById('container');
 
 var faceb = document.getElementById('faceb');
 var twit = document.getElementById('twit');
@@ -29,10 +29,5 @@ diam.addEventListener('mouseover', () => diam.style.opacity = 0.5);
 diam.addEventListener('mouseout', () => diam.style.opacity = 1);
 
 hamburger.addEventListener('click', () => {
-    var boolean = navi.classList.toggle('closed');
-    header.classList.toggle('ombrage');
-    
-    
+    navi.classList.toggle('closed');
 });
-/*
-setAttribute('style','display:none;')}*/
