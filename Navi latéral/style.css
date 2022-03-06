@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+:root {
+    --bleufonce: #324D67;
+    --bleu: #49A6E9;
+    --bleuclair: #add0e9;
+    --ombres: rgb(197, 197, 197);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    border: dotted blue 1px;
+}
+
+body {
+    border: dotted red 2px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(241, 244, 249);
+}
+
+#logo {
+    position: relative;
+    top: -30px;
+    margin-left: 30px;
+    filter: drop-shadow(3px 3px 2px rgb(182, 182, 182));
+    cursor: default;
+    font-size: 1.3rem;
+}
+
+span {
+    color: var(--bleu);
+    margin-left: 8px;
+}
+
+#cross {
+    position: relative;
+    top: 5px;
+    left: 90%;
+    width: 40px;
+    height: 40px;
+    border: yellow 1px solid;
+    z-index: 1;   /*IMPORTANT pour qu'il passe au dessur de #logo*/
+    transition: all 1s;
+}
+
+#cross:hover {
+    transform: rotate(180deg);
+    z-index: 1;    /*IMPORTANT pour qu'il passe au dessur de #logo*/
+    transition: all 1s;
+
+}
+
+#cross img {
+    max-width: 100%;
+}
+
+#hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.rect {
+    width: 100%;
+    height: 8px;
+    background-color: var(--bleu);
+    border-radius: 10px;
+
+}
+
+nav {
+    position: absolute;
+    left: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+#container {
+    border: red 2px dotted;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#container ul li {
+    margin-top: 5px;
+    width: 100%;
+}
+
+#container ul a {
+    display: block;
+    padding-left: 30px;
+    text-decoration: none;
+    color: var(--bleufonce);
+    font-size: 1.5rem;
+    transition: all 0.5s;
+
+}
+
+#container ul a:hover {
+    color: var(--bleu);
+    background-color: var(--bleuclair);
+    padding-left: 50px;
+    transition: all 0.5s;
+}
+
+#liens {
+    position: relative;
+    height: 40px;
+    width: 180px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+ 
+}
+
+#liens a {
+    height: 40px;
+}
