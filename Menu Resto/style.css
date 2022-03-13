@@ -14,7 +14,7 @@
 
 h1 {
     width: 400px;
-    margin: auto;
+    margin: 30px auto 30px auto;
     text-align: center;
 }
 
@@ -29,11 +29,30 @@ h3 {
 }
 
 nav {
-    margin: auto;
+    margin:  30px auto 30px auto;
     width: 600px;
-    border: solid red 1px;
     display: flex;
     justify-content: space-around;
+    
+}
+
+#interligne {
+    background-color: var(--dore);
+    height: 4px;
+    width: 80px;
+    margin: auto;
+
+}
+
+button {
+    color: var(--dore);
+    font-size: large;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+    border-style: double;
+    border: solid 2px;
+    border-right-color: var(--ombre);
+    border-bottom-color: var(--ombre);
 }
 
 section {
