@@ -71,7 +71,7 @@ section {
     margin-bottom: 20px;
 }
 
-.cadre:nth-child(odd) {
+.cadre:nth-child(odd) {  
     margin-left: 90px;
 }
 
