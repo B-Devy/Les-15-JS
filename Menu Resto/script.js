@@ -77,34 +77,93 @@ var dej = document.getElementById('dej');
 var shaker = document.getElementById('shaker');
 var diner = document.getElementById('diner');
 
-
 var section = document.querySelector('section');
 
-
-for (var i = 0; i < tab.length; i++) {
-    var formule = `<div class="cadre"><div class="photo"><img src="${tab[i]["image"]}" alt=""></div><article><div class="titre"><div><h2>${tab[i]["name"]}</h2></div> <div><h3>${tab[i]["prix"]}</h3></div></div><div class="interligne"></div><div class="para"><p>${tab[i]["texte"]}</p></div></article></div>`
-    section.innerHTML += formule;
-}
-
-petitdej.addEventListener('click', () => {
-    
+//-------------------ALL-------------------------------------
+function debut() {
+    section.innerHTML = '<div><div/>';
     for (var i = 0; i < tab.length; i++) {
-
-        if (tab)[i] == "petitdej") {
-
             var formule = `<div class="cadre"><div class="photo"><img src="${tab[i]["image"]}" alt=""></div><article><div class="titre"><div><h2>${tab[i]["name"]}</h2></div> <div><h3>${tab[i]["prix"]}</h3></div></div><div class="interligne"></div><div class="para"><p>${tab[i]["texte"]}</p></div></article></div>`
             section.innerHTML += formule;
-        }
+    }
+};
 
+debut();
+
+tout.addEventListener('click', debut);
+//-----------------PETIT DEJ----------------------------
+
+petitdej.addEventListener('click', () => {
+
+    const newTab = tab.filter( (obj) => obj.sorte == "petitdej" );
+    section.innerHTML = '<div><div/>';
+       
+       for (var i = 0; i < newTab.length; i++) {
+
+            var formule = `<div class="cadre"><div class="photo"><img src="${newTab[i]["image"]}" alt=""></div><article><div class="titre"><div><h2>${newTab[i]["name"]}</h2></div> <div><h3>${newTab[i]["prix"]}</h3></div></div><div class="interligne"></div><div class="para"><p>${newTab[i]["texte"]}</p></div></article></div>`
+            section.innerHTML += formule;
     }
 })
 
+//------------------------------MIDI------------------------
+dej.addEventListener('click', () => {
 
-console.log(tab.image);
+    const newTab = tab.filter( (obj) => obj.sorte == "dej" );
+    section.innerHTML = '<div><div/>';
+       
+       for (var i = 0; i < newTab.length; i++) {
 
+            var formule = `<div class="cadre"><div class="photo"><img src="${newTab[i]["image"]}" alt=""></div><article><div class="titre"><div><h2>${newTab[i]["name"]}</h2></div> <div><h3>${newTab[i]["prix"]}</h3></div></div><div class="interligne"></div><div class="para"><p>${newTab[i]["texte"]}</p></div></article></div>`
+            section.innerHTML += formule;
+    }
+})
 
+//------------------------------SHAKER------------------------
+shaker.addEventListener('click', () => {
 
+    const newTab = tab.filter( (obj) => obj.sorte == "shaker" );
+    section.innerHTML = '<div><div/>';
+       
+       for (var i = 0; i < newTab.length; i++) {
 
+            var formule = `<div class="cadre"><div class="photo"><img src="${newTab[i]["image"]}" alt=""></div><article><div class="titre"><div><h2>${newTab[i]["name"]}</h2></div> <div><h3>${newTab[i]["prix"]}</h3></div></div><div class="interligne"></div><div class="para"><p>${newTab[i]["texte"]}</p></div></article></div>`
+            section.innerHTML += formule;
+    }
+})
+
+//------------------------------DINER------------------------
+diner.addEventListener('click', () => {
+
+    const newTab = tab.filter( (obj) => obj.sorte == "diner" );
+    section.innerHTML = '<div><div/>';
+       
+       for (var i = 0; i < newTab.length; i++) {
+
+            var formule = `<div class="cadre"><div class="photo"><img src="${newTab[i]["image"]}" alt=""></div><article><div class="titre"><div><h2>${newTab[i]["name"]}</h2></div> <div><h3>${newTab[i]["prix"]}</h3></div></div><div class="interligne"></div><div class="para"><p>${newTab[i]["texte"]}</p></div></article></div>`
+            section.innerHTML += formule;
+    }
+})
+
+//---------------A RESOUDRE ULTERIEUREMENT-----------------------------------------
+/*
+const boutons = [petitdej, dej, shaker, diner];
+
+boutons.forEach((e) => {
+
+    e.addEventListener('click', () => {
+        const newTab = tab.filter( (obj) => {obj.sorte == /*"petitdej"});
+
+        section.innerHTML = '<div><div/>';
+           
+           for (var i = 0; i < newTab.length; i++) {
+    
+                var formule = `<div class="cadre"><div class="photo"><img src="${newTab[i]["image"]}" alt=""></div><article><div class="titre"><div><h2>${newTab[i]["name"]}</h2></div> <div><h3>${newTab[i]["prix"]}</h3></div></div><div class="interligne"></div><div class="para"><p>${newTab[i]["texte"]}</p></div></article></div>`
+                console.log(formule);
+                section.innerHTML += formule;
+        }
+    })
+})
+*/
 
 
 
