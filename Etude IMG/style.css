@@ -1,0 +1,34 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    border: red 2px dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#division {
+    border: dotted purple 2px;
+    width: 70vw;
+    height: 50vh;
+    overflow: hidden;
+}
+
+img {
+    min-width: 70vw;
+    min-height: 50vh;
+    /*transform: translate(-50px, -100px);*/
+    object-fit: cover;
+    max-width: 100%;
+}
+
+
+
